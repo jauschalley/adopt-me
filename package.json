@@ -6,13 +6,19 @@
   "scripts": {
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+    "dev": "parcel src/index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
