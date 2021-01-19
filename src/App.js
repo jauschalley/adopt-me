@@ -11,7 +11,8 @@ const App = () => {
     "div", //target
     {}, // attributes to be passed in
     [
-      React.createElement("h1", {}, "Adopt Me!"), //children
+      //children
+      React.createElement("h1", {}, "Adopt Me!"),
       React.createElement(Pet, {
         name: "Ben",
         animal: "Dog",
