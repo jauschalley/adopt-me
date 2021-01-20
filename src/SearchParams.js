@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import pet, {ANIMALS} from "@frontendmasters/pet";
 import useDropdown from './useDropdown';
+import Results from './Results';
 
 const SearchParams = () => {
   const [location, setLocation] = useState("Seattle, WA");
@@ -23,8 +24,8 @@ const SearchParams = () => {
     setBreeds([]);
     setBreed("");
 
-    pet.breeds(animal).then(({apiBreeds}) => {
-      const breedStrings = apiBreeds.map(({name}) => name);
+    pet.breeds(animal).then(({breeds}) => {
+      const breedStrings = breeds.map(({name}) => name);
       setBreeds(breedStrings);
     }, console.error);
   }, [animal, setBreed, setBreeds])
@@ -48,6 +49,7 @@ const SearchParams = () => {
         <BreedDropdown/>
         <button>Submit</button>
       </form>
+      <Results pets={pets} />
     </div>
   )
 }
