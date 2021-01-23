@@ -1,6 +1,7 @@
 import React from "react";
 import Pet from './Pet';
 
+//stateless functional component
 const Results = ({pets}) => {
   return (
     <div className="search">
